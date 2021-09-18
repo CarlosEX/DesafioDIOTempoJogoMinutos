@@ -10,7 +10,7 @@ Essa foi mais uma vitória que nos motiva a querer sempre melhorarmos, além de 
 
 
 
-Agora passa!
+**Agora passa!**
 
 ![Superação](https://scontent.fcau11-1.fna.fbcdn.net/v/t39.30808-6/s851x315/242169423_579355149927183_6879047510109066776_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=XbmPwtoTq3QAX9AioTF&_nc_ht=scontent.fcau11-1.fna&oh=745ef73f579422153ac52b553ad9ba78&oe=614B0DCD)
 
@@ -43,7 +43,7 @@ Este não é necessariamente um problema, mas é uma motivação relacionada a e
 
 Infelizmente eu não tenho o esqueleto da versão original do exercício 3/3. Por que ele exemplifica claramente o que eu pretendo elucidar nessa parte do artigo. Porém, vou utilizar um modelo já pronto, que vai mostrar claramente os pontos que comprometem a qualidade do código, e violam as regras do Clean Code.
 
-Todo código é passível a ser refatorado e melhorado.
+> Todo código é passível a ser refatorado e melhorado.
 
 Nos desafios de código dos bootcamps, recebemos um breve escopo do desafio, com as regras de negócio e exemplos de input e output. E para ajudar mais ainda, recebemos um modelo de algoritmo com partes a serem preenchidas com a nossa solução. Isso é bom, principalmente para os Devs iniciantes, e até mesmo os Devs mais avançados, por que dá uma ideia inicial da solução.
 
@@ -64,25 +64,25 @@ Pessoal, antes de continuar eu gostaria de deixar claro que meu código não est
 
 ## Algumas das técnicas utilizadas:
 
- - Clean Code
- - Nomes significativos
- - Use Nomes que Revelam seu Propósito.
- - Use Nomes Pronunciáveis
- - Nomes de Métodos
- - Use nomes a partir do Domínio da Solução
- - Use nomes de Domínios do Problema
- - Teste unitário
- - Refactoring
- - Extract Class (refactoring)
- - Extract Function (refactoring)
- - Introduce Parameter Object (refactoring)
- - Decompose Conditional (refactoring)
- - Replace Constructor with Factory Function (refactoring) = Factory (Pattern)
- - Substituir If e Else pelo operador tenário
- - Design Pattern
- - Factory
- - SOLID
- - DIP
+ - **Clean Code
+   - Nomes significativos
+   - Use Nomes que Revelam seu Propósito.
+   - Use Nomes Pronunciáveis
+   - Nomes de Métodos
+   - Use nomes a partir do Domínio da Solução
+   - Use nomes de Domínios do Problema
+   - Teste unitário
+ - **Refactoring
+   - Extract Class (refactoring)
+   - Extract Function (refactoring)
+   - Introduce Parameter Object (refactoring)
+   - Decompose Conditional (refactoring)
+   - Replace Constructor with Factory Function (refactoring) = Factory (Pattern)
+   - Substituir If e Else pelo operador tenário
+ - **Design Pattern
+   - Factory
+ - **SOLID
+   - DIP
 
 
 Vamos ao código inicial:
@@ -135,7 +135,7 @@ Esse código além de confuso, viola regras importantes para uma boa legibilidad
 
 #### Variable Names (Nomes de variáveis)
 
-Olhando o código acima, o que faz a variável hi ? Até você parar por alguns minutos e ler o enunciado e tentar se achar nesse emaranhado de código, para depois descobrir que ela representa a "hora inicial", já se foram preciosos minutos ou horas.
+Olhando o código acima, o que faz a variável ***hi*** ? Até você parar por alguns minutos e ler o enunciado e tentar se achar nesse emaranhado de código, para depois descobrir que ela representa a ***"hora inicial"***, já se foram preciosos minutos ou horas.
 
 
 
@@ -185,7 +185,7 @@ Veja onde o que declaramos no método main:
 
 
 
-A classe JogoFactory é uma Factory simples para criar instâncias da classe Jogo.
+A classe **JogoFactory** é uma Factory simples para criar instâncias da classe Jogo.
 
 Essa classe não era necessária para o desafio, mas eu acabei criando o hábito de aplicar esse pattern simples sempre que possível. O ideal seria passar uma interface no tipo, mas para não deixar muito "purista" acebei passando a própria classe concreta Jogo.
 
@@ -200,7 +200,7 @@ Essa classe não era necessária para o desafio, mas eu acabei criando o hábito
 
 #### TimeSpanCompare
 
-Criei esse Enum, para simplificar o tipo de resultado das verificações de TimeSpan.Compare, já que trabalhar com os valores explicitos nas verificações, não eram muito intuitivo.
+Criei esse Enum, para simplificar o tipo de resultado das verificações de **TimeSpan.Compare**, já que trabalhar com os valores explicitos nas verificações, não eram muito intuitivo.
 
             public enum TimeSpanCompare {
              IsMenor = -1,
